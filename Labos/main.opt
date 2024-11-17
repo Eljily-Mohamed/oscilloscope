@@ -1,0 +1,17 @@
+# main.opt
+
+# Colors and properties of labels
+*Label.foreground: green
+*Label.background: light yellow
+*Label.relief: raised
+
+# Properties of sliders (Scale)
+*Scale.background: light gray
+*Scale.activeBackground: light blue
+*Scale.troughcolor: light yellow
+*Scale.width: 15
+
+# Fonts
+*Font.labelFont: Helvetica 12
+*Font.scaleFont: Helvetica 10
+

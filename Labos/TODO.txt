@@ -1,0 +1,83 @@
+En début de  seance
+===================
+1) Faire une copie du sujet de labos :
+- /home/TP/modules/sujets/CAI/TkInter/Labos/
+sous un de vos repertoires utilisateur+
+
+2) Tester l'implémentation des classes  :
+--> Subject, Observer (observer.py) : implémentation du patron de conception Observer
+--> Generator (models.py) : calcul des élongations d'un mouvement vibratoire harmonique
+--> Screen (views.py) : visualisation du modèle de mouvement vibratoire harmonique
+--> Controls (controllers.py) : contrôle et visualisation des propriétés du modèle de  mouvement vibratoire harmonique
+3)  Tester l'application IHM avec barre de menus, utilisant ces différentes classes :
+--> python main.py
+
+Objectifs
+=========
+L'objectif de ce labo est de réaliser une IHM pour contrôler et visualiser les différents paramètres de modèles de mouvement vibratoire harmonique.
+
+L'implémentation de cette IHM repose sur la mise en oeuvre des bonnes pratiques de programmation basées sur les patrons de conception Observer et MVC afin de pouvoir séparer le développement du modèle de sa visualisation et de son contrôle.
+
+Pour réaliser cette application en langage python on exploitera la bibliothèque TkInter,
+bibliothèque IHM stabdard en python et simple d'utilisation.
+
+Archivage
+=========
+A chaque fin de séance, lancer le script shell send_TkInter.sh pour déposer automatiquement l'archive de votre projet, 
+nommée avec vos noms de binômes, sous le repertoire :/home/TP/TPrendu/nedelec/CAI/TkInter
+--> ./send_TkInter.sh /home/TP/TPrendu/nedelec/CAI/TkInter
+
+Attention
+---------
+Cette archive devra contenir simplement les fichiers nécessaires à l'application :
+  - controllers.py  : classe Controller du modèle MVC
+  - main.py         : application principale (le point d'entrée pour tester votre travail)
+  - main.opt        : fichier de configuration d'options (propriétés des widgets)
+  - models.py       : classe Generator du modèle MVC
+  - observer.py     : classes (Observer, Subject) du  modèle Observer
+  - send_TkInter.sh : script shell pour déposer l'archive sous le réertoir partagé /home/TP/TPrendu/nedelec/CAI/TkInter
+  - TODO.txt        : ce fichier en cours de lecture !
+  - views.py        : classe Screen du modèle MVC
+  
+
+Premiere version : parametrage d'un signal
+==========================================
+Affichage et contrôle d'un signal ("X") dans l'application  :
+ 1) modifier l'application existante pour contrôler la fréquence en mettant en oeuvre le patron de conception Observer
+ 2) réagencer automatiquement les composants graphiques en cas de retaillage de la fenetre
+ 3) ajouter les contrôleurs d'amplitude et de phase du signal
+ 4) ajouter le contrôle du nombre d'harmoniques du signal en choisissant un composant graphique adapté
+ 5) ajouter le contrôle  des harmoniques paires, impaires  en choisissant des composants graphiques adaptés
+ 6) réagencer automatiquement les composants graphiques en cas de retaillage de la fenetre
+ 7) configurer l'IHM (couleur,texte, positionnement des sliders ...) dans un fichier d'options (main.opt)
+ 8) mettre en place une animation (after()) de spot correspondant aux elongations du signal sur le nombre d'échantillons
+ 9) inserer dans l'IHM un contrôleur sur le nombre d'échantillons du signal 
+ 
+Deuxieme version : Gestion de barre de Menu 
+===========================================
+Dans cette version on ajoutera l'interaction sur l'application à l'aide de menus que l'on retrouve classiquement dans les IHM :
+1) Help :
+   - About Us : informations (messagebox,filedialog  ...) avec (Nom,Prénom, e-mail)  des concepteurs de l'application
+   - About Tk : informations (messagebox,filedialog  ...) pour référencer l'API utilisée pour développer l'IHM
+   - About Python : informations (messagebox,filedialog  ...) pour référencer le langage utilisé pour développer l'IHM
+2) File :
+   - Exit : sortie d'application avec boite de dialogue (messagebox,filedialog  ...) pour avertir sur une action irréversible
+   - Open : chargement des parametres de signaux (amplitude,frequence ....)
+      a) dans un premier temps, chargement d'un nom de fichier fixé par defaut dans l'application (json.load())
+      b) puis, dans un deuxième temps, en utilisant une boite de dialogue pour sélectionner le nom de fichier (filedialog ...) 
+   - Save : sauvegarde des parametres de signaux (amplitude,frequence ....)
+      a) dans un premier temps, sauvegarde dans un  nom de fichier fixé par defaut dans l'application (json.load())
+      b) puis, dans un deuxième temps, en utilisant une boite de dialogue pour sélectionner le nom de fichier (filedialog ...) 
+ 
+Troisieme version : Gestion de plusieurs signaux 
+================================================
+Faire évoluer l'application precedente afin de controler plusieurs signaux
+ 1) gestion d'un deuxième signal ("Y") dans la même vue
+ 2) gestion d'affichage en mode "X-Y" dans une fenêtre secondaire  (Toplevel)
+ 3) gestion d'affichage d'animation de spots sur les courbes "X","Y" et "X-Y"
+
+Dans le menu "File", ajouter la possibilité de sauvegarde dans un fichier (format png, jpg ...) 
+des signaux visualisés dans les Canvas. On utilisera le module PIL (Python Image Library).
+Comme pour les autres sauvegardes on aura la possibilité de sauvegarder :
+      a) dans un premier temps, dans un nom de fichier fixé par defaut dans l'application
+      b) puis, dans un deuxième temps, en utilisant une boite de dialogue pour sélectionner le répertoire et le nom de fichier de sauvegarde 
