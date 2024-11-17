@@ -35,6 +35,26 @@ This project demonstrates the creation of a GUI to control and visualize harmoni
    python main.py
 
 ## Demonstration
+Below are snapshots of the application in action:
 
-Here’s a snapshot of the application in action:
+### Main Program
+![Image 1](demo/image1.png)
 
+### Resize Handled
+![Image 2](demo/image2.png)
+
+### Save Signal Status as JSON File
+![Image 3](demo/image3.png)
+
+### Authors
+![Image 4](demo/image4.png)
+
+### Save Signal as Image
+![Test Image](demo/test.png)
+
+### Signal X-Y
+![Image 5](demo/image5.png)
+
+
+## Questions or Feedback
+If you have any questions or need further assistance, feel free to contact me at [mohamedeljily2005@gmail.com].
