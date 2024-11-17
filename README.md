@@ -56,5 +56,9 @@ Below are snapshots of the application in action:
 ![Image 5](demo/image5.png)
 
 
+### Authors
+- [Me](https://github.com/Eljily-Mohamed)
+- [CHOUBRI Douae](https://github.com/Douae01)
+
 ## Questions or Feedback
 If you have any questions or need further assistance, feel free to contact me at [mohamedeljily2005@gmail.com].
